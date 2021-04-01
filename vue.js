@@ -19,6 +19,24 @@ const Counter = {
         message: 'You loaded this page on ' + new Date().toLocaleString()
       }
     }
-  }
+  } 
   
   Vue.createApp(AttributeBinding).mount('#bind-attribute')
+
+  const EventHandling = {
+    data() {
+      return {
+        message: 'Hello Vue.js!'
+      }
+    },
+    methods: {
+      reverseMessage() {
+        this.message = this.message
+          .split('')
+          .reverse()
+          .join('')
+      }
+    }
+  }
+  
+  Vue.createApp(EventHandling).mount('#event-handling')
